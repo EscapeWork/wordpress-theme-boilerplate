@@ -1,0 +1,11 @@
+{
+    "name": "escape-laravel-bootstrap",
+
+    "dependencies": {
+        "normalize.scss": "3.*",
+        "jquery": "1.11.*",
+        "bootstrap-sass": "~3.3.5",
+        "font-awesome": "4.5.*",
+        "share-bar": "~3.0.15"
+    }
+}

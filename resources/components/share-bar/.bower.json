@@ -1,0 +1,38 @@
+{
+  "name": "share-bar",
+  "version": "3.0.15",
+  "homepage": "https://github.com/globocom/share-bar",
+  "authors": [
+    "globo.com"
+  ],
+  "description": "ShareBar is a plugin to create share bars. ShareBar is responsive, adaptable and easy to use.",
+  "main": "dist/js/share.bar.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "sharebar",
+    "twitter",
+    "facebook",
+    "pintereset",
+    "share",
+    "buttons"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "3.0.15",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.0.15",
+    "commit": "365225841dad2eb371478d1dc8cbcd0471115fb1"
+  },
+  "_source": "https://github.com/globocom/share-bar.git",
+  "_target": "~3.0.15",
+  "_originalSource": "share-bar"
+}

@@ -1,0 +1,95 @@
+@import "compass";
+
+.share-theme-minimal .share-button .svg-size .share-icon {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.share-theme-minimal {
+    .share-button {
+        display: inline-block;
+        min-width: 34px;
+
+        a {
+            background-color: transparent;
+            @include box-shadow(rgba(0,0,0,0.25) 0 0 0 inset);
+
+            &:active {
+                padding-bottom: 11px;
+            }
+        }
+
+        .svg-size .share-icon {
+            vertical-align: baseline;
+        }
+    }
+
+    .share-button.share-small a,
+    .share-button.share-full a {
+        padding: 7px 7px 7px 7px;
+
+        &:active {
+            padding-bottom: 7px;
+        }
+    }
+
+    .share-button a span,
+    .share-button.share-small a span,
+    .share-button.share-full a span {
+        display: none;
+    }
+
+    .share-facebook a .share-icon {
+        fill: #325c99;
+    }
+
+    .share-twitter a .share-icon {
+        fill: #02acec;
+    }
+
+    .share-googleplus a .share-icon {
+        fill: #dd4b39;
+    }
+
+    .share-pinterest a .share-icon {
+        fill: #cb2027;
+    }
+
+    .share-email a .share-icon {
+        fill: #8f9eb3;
+    }
+
+    .share-whatsapp a .share-icon {
+        fill: #58ad15;
+    }
+}
+
+/*  FALLBACK de fontes para browsers que nao suportam svg  */
+.share-theme-minimal {
+
+    .share-facebook i {
+        color:  #325c99;
+    }
+
+    .share-twitter i {
+        color:  #02acec;
+    }
+
+    .share-googleplus i {
+        color:  #dd4b39;
+    }
+
+    .share-pinterest i {
+        color:  #dd4b39;
+    }
+
+    .share-email i {
+        color:  #8f9eb3;
+    }
+
+    .share-whatsapp i {
+        color:  #58ad15;
+    }
+}
