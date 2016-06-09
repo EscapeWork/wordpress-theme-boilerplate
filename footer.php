@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 |--------------------------------------------------------------------------
 | Wordpress theme > footer.php
@@ -6,7 +6,7 @@
 */
 ?>
     <footer class="footer">
-        
+
     </footer><!-- .footer -->
 
     <?php
@@ -14,8 +14,8 @@
     ?>
 
     <!-- scripts -->
-    <script src="<?=bloginfo('template_url')?>/assets/js/vendor/vendor.min.js"></script>
-    <script src="<?=bloginfo('template_url')?>/assets/js/main.js"></script>
+    <script src="<?=bloginfo('template_url')?>/assets/vendor/vendor.min.js"></script>
+    <script src="<?=bloginfo('template_url')?>/assets/js/main.min.js"></script>
 
     <!-- google analytics -->
     <script>
