@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 |--------------------------------------------------------------------------
 | Wordpress theme > single.php
@@ -7,6 +7,8 @@
 
 # header
 get_header();
+
+the_post();
 
 if (has_post_thumbnail()) :
     $banner = post_featured_image(array(1920, 380));
@@ -40,6 +42,35 @@ endif;
                         </div><!-- .col-md-6 -->
                     </div><!-- .post-meta -->
                 </article><!-- .post -->
+
+                <?php $posts = get_posts(array('post__not_in' => array($post->ID), 'posts_per_page' => 3, 'order' => DESC)); ?>
+
+                <div class="other-posts">
+                    <div class="row">
+                        <?php
+                            foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+                            <div class="col-sm-4 other-post">
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php
+                                    if (has_post_thumbnail()) { ?>
+                                        <div class="post-thumb">
+                                            <?php the_post_thumbnail(array(285, 160)); ?>
+                                        </div>
+                                    <?php } ?>
+
+                                    <div class="post-meta-left">
+                                        <p class="post-meta-item">Publicado em <?php the_time('d') ?> de <?php the_time('M') ?> de <?php the_time('Y') ?> por <?php the_author() ?></p>
+                                    </div><!-- .col-md-6 -->
+
+                                    <h2 class="post-title"><?php the_title(); ?></h2>
+                                </a>
+                            </div>
+                            <?php
+                            endforeach;
+                            wp_reset_postdata();
+                        ?>
+                    </div><!-- .row -->
+                </div><!-- .other-posts -->
 
                 <?php comments_template(); ?>
             </section><!-- .content -->
